@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827"><link rel="manifest" href="manifest.webmanifest">
+<title>ResearchHub AI</title>
+<style>
+:root{--bg:#0b1220;--panel:#121e30;--panel2:#19283d;--text:#edf4ff;--muted:#a9b8cc;--line:#2b3c54;--accent:#77b7ff;--mint:#75e0c0}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#0b1220,#111d30 65%,#13253a);color:var(--text);font:15px/1.5 system-ui,Arial,sans-serif}
+header{padding:26px max(18px,calc((100% - 1150px)/2));border-bottom:1px solid var(--line);background:#0b1220cc;position:sticky;top:0;backdrop-filter:blur(12px);z-index:2}
+.brand{font-size:24px;font-weight:800;letter-spacing:-.5px}.brand span{color:var(--mint)}.sub{color:var(--muted);margin-top:3px}
+main{max-width:1150px;margin:24px auto;padding:0 18px}.hero{padding:24px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(110deg,#1a304a,#17253a);display:flex;justify-content:space-between;gap:20px;align-items:center}.hero h1{margin:0 0 6px;font-size:clamp(24px,4vw,34px)}.hero p{margin:0;color:var(--muted);max-width:680px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.tab,button{border:1px solid var(--line);border-radius:11px;background:var(--panel2);color:var(--text);padding:10px 14px;cursor:pointer}.tab.active,button.primary{background:#24527c;border-color:#397db5}.section{display:none}.section.active{display:block}.heading{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:24px 0 12px}.heading h2{margin:0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:16px}.tool{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--text);min-height:90px;transition:.15s}.tool:hover{border-color:var(--accent);transform:translateY(-2px)}.logo{width:42px;height:42px;border-radius:12px;background:#263b55;display:grid;place-items:center;font-weight:800;color:var(--mint);flex:none}.tool b{display:block}.tool small{color:var(--muted)}a{color:var(--accent)}input,textarea,select{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:#0d1726;color:var(--text);margin:5px 0 12px}textarea{min-height:110px;resize:vertical}label{color:var(--muted);font-size:13px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.item{padding:12px;border-top:1px solid var(--line)}.item:first-child{border-top:0}.item b{display:block}.actions{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:12px;color:var(--mint);border:1px solid #376b68;border-radius:99px;padding:3px 8px}.notice{font-size:13px;color:var(--muted);padding:12px;border-left:3px solid var(--mint);background:#142437;border-radius:8px}.hide{display:none!important}footer{color:var(--muted);font-size:12px;padding:30px 0;text-align:center}
+@media(max-width:600px){.hero{display:block}.row{grid-template-columns:1fr}header{position:static}}
+</style></head>
+<body>
+<header><div class="brand">ResearchHub <span>AI</span></div><div class="sub">Your personal research workspace · Web + Android-ready PWA</div></header>
+<main>
+<section class="hero"><div><h1>Research smarter. Keep everything organized.</h1><p>One workspace for AI assistants, academic search engines, papers, references, notes, and writing tools.</p></div><span class="pill">PERSONAL WORKSPACE</span></section>
+<nav>
+<button class="tab active" data-tab="home">Dashboard</button><button class="tab" data-tab="papers">Paper Library</button><button class="tab" data-tab="refs">References</button><button class="tab" data-tab="notes">Research Notes</button><button class="tab" data-tab="workflow">Research Guide</button>
+</nav>
+<section id="home" class="section active">
+<div class="heading"><h2>AI assistants</h2><span class="muted">Open a tool in a new tab</span></div>
+<div class="grid">
+<a class="card tool" href="https://chatgpt.com/" target="_blank" rel="noopener"><span class="logo">GPT</span><span><b>ChatGPT</b><small>Explain, outline, revise, brainstorm</small></span></a>
+<a class="card tool" href="https://echogpt.live/" target="_blank" rel="noopener"><span class="logo">E</span><span><b>EchoGPT</b><small>Multi-model AI chat and comparisons</small></span></a>
+<a class="card tool" href="https://anara.com/" target="_blank" rel="noopener"><span class="logo">A</span><span><b>Anara</b><small>Academic research and paper analysis</small></span></a>
+<a class="card tool" href="https://gemini.google.com/" target="_blank" rel="noopener"><span class="logo">G</span><span><b>Google Gemini</b><small>General AI assistant</small></span></a>
+<a class="card tool" href="https://claude.ai/" target="_blank" rel="noopener"><span class="logo">C</span><span><b>Claude</b><small>Reading, reasoning, writing support</small></span></a>
+<a class="card tool" href="https://notebooklm.google.com/" target="_blank" rel="noopener"><span class="logo">N</span><span><b>NotebookLM</b><small>Work with your own source materials</small></span></a>
+<a class="card tool" href="https://www.perplexity.ai/" target="_blank" rel="noopener"><span class="logo">P</span><span><b>Perplexity</b><small>Web research with linked sources</small></span></a>
+<a class="card tool" href="https://www.microsoft.com/en-us/microsoft-copilot" target="_blank" rel="noopener"><span class="logo">Co</span><span><b>Microsoft Copilot</b><small>General assistant and productivity</small></span></a>
+</div>
+<div class="heading"><h2>Academic search & discovery</h2></div><div class="grid">
+<a class="card tool" href="https://scholar.google.com/" target="_blank" rel="noopener"><span class="logo">GS</span><span><b>Google Scholar</b><small>Scholarly articles and citations</small></span></a>
+<a class="card tool" href="https://www.semanticscholar.org/" target="_blank" rel="noopener"><span class="logo">SS</span><span><b>Semantic Scholar</b><small>AI-powered academic search</small></span></a>
+<a class="card tool" href="https://elicit.com/" target="_blank" rel="noopener"><span class="logo">EL</span><span><b>Elicit</b><small>Literature review assistance</small></span></a>
+<a class="card tool" href="https://consensus.app/" target="_blank" rel="noopener"><span class="logo">CN</span><span><b>Consensus</b><small>Explore research-backed answers</small></span></a>
+<a class="card tool" href="https://typeset.io/" target="_blank" rel="noopener"><span class="logo">SC</span><span><b>SciSpace</b><small>Understand and work with papers</small></span></a>
+<a class="card tool" href="https://www.researchgate.net/" target="_blank" rel="noopener"><span class="logo">RG</span><span><b>ResearchGate</b><small>Researcher profiles and publications</small></span></a>
+<a class="card tool" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener"><span class="logo">PM</span><span><b>PubMed</b><small>Biomedical literature database</small></span></a>
+<a class="card tool" href="https://eric.ed.gov/" target="_blank" rel="noopener"><span class="logo">ER</span><span><b>ERIC</b><small>Education research database</small></span></a>
+<a class="card tool" href="https://doaj.org/" target="_blank" rel="noopener"><span class="logo">OA</span><span><b>DOAJ</b><small>Directory of open-access journals</small></span></a>
+<a class="card tool" href="https://www.jstor.org/" target="_blank" rel="noopener"><span class="logo">J</span><span><b>JSTOR</b><small>Academic books and journal content</small></span></a>
+<a class="card tool" href="https://openalex.org/" target="_blank" rel="noopener"><span class="logo">OA</span><span><b>OpenAlex</b><small>Open scholarly catalog</small></span></a>
+<a class="card tool" href="https://search.crossref.org/" target="_blank" rel="noopener"><span class="logo">CR</span><span><b>Crossref Search</b><small>Check publication metadata and DOI</small></span></a>
+</div>
+<div class="heading"><h2>Writing, citations & productivity</h2></div><div class="grid">
+<a class="card tool" href="https://www.zotero.org/" target="_blank" rel="noopener"><span class="logo">Z</span><span><b>Zotero</b><small>Reference management</small></span></a>
+<a class="card tool" href="https://www.mybib.com/" target="_blank" rel="noopener"><span class="logo">MB</span><span><b>MyBib</b><small>Citation formatting helper</small></span></a>
+<a class="card tool" href="https://www.google.com/docs/about/" target="_blank" rel="noopener"><span class="logo">D</span><span><b>Google Docs</b><small>Draft and collaborate on documents</small></span></a>
+<a class="card tool" href="https://www.overleaf.com/" target="_blank" rel="noopener"><span class="logo">OL</span><span><b>Overleaf</b><small>LaTeX writing workspace</small></span></a>
+<a class="card tool" href="https://www.grammarly.com/" target="_blank" rel="noopener"><span class="logo">Gr</span><span><b>Grammarly</b><small>Grammar and clarity support</small></span></a>
+<a class="card tool" href="https://quillbot.com/" target="_blank" rel="noopener"><span class="logo">Q</span><span><b>QuillBot</b><small>Writing and paraphrasing aid</small></span></a>
+</div>
+<p class="notice">Use AI as a helper, not as the source of truth. Open and read original papers, verify authors/year/DOI, and follow your teacher's rules about AI use and citation.</p>
+</section>
+<section id="papers" class="section"><div class="heading"><h2>Paper Library</h2><span class="muted">Saved on this device/browser</span></div>
+<div class="card"><form id="paperForm"><label>Paper / article title</label><input id="pt" required placeholder="Enter the exact title"><div class="row"><div><label>Author(s)</label><input id="pa" placeholder="Surname, initials"></div><div><label>Year</label><input id="py" placeholder="e.g. 2024"></div></div><label>DOI or source URL</label><input id="pd" placeholder="https://... or DOI"><label>Short summary / relevance</label><textarea id="ps" placeholder="What is this study about? How does it relate to your research?"></textarea><button class="primary">Save paper</button></form></div><div class="card" style="margin-top:12px"><div id="paperList" class="muted">No papers saved yet.</div></div></section>
+<section id="refs" class="section"><div class="heading"><h2>Reference Organizer</h2></div><div class="card"><form id="refForm"><label>Source title</label><input id="rt" required><div class="row"><div><label>Author(s)</label><input id="ra"></div><div><label>Publication year</label><input id="ry"></div></div><label>Journal / publisher</label><input id="rj"><label>DOI / URL</label><input id="ru"><button class="primary">Add reference</button></form></div><div class="card" style="margin-top:12px"><div id="refList" class="muted">No references saved yet.</div></div></section>
+<section id="notes" class="section"><div class="heading"><h2>Research Notes</h2></div><div class="card"><label>Note title</label><input id="nt" placeholder="e.g. RRL themes"><label>Notes</label><textarea id="nb" placeholder="Write your ideas, findings, questions, or adviser comments..."></textarea><div class="actions"><button class="primary" id="saveNote">Save note</button><button id="clearNote">Clear fields</button></div></div><div class="card" style="margin-top:12px"><div id="noteList" class="muted">No notes saved yet.</div></div></section>
+<section id="workflow" class="section"><div class="heading"><h2>Suggested research workflow</h2></div><div class="card">
+<div class="item"><b>1. Search for studies</b><span class="muted">Use Google Scholar, Semantic Scholar, ERIC, DOAJ, or other suitable databases. Search with focused keywords.</span></div>
+<div class="item"><b>2. Read the original source</b><span class="muted">Check the abstract, method, participants, findings, limitations, and publication details.</span></div>
+<div class="item"><b>3. Use AI to understand—not invent</b><span class="muted">Ask ChatGPT, Anara, EchoGPT, or NotebookLM to explain a paper you provide. Verify every claim against the paper.</span></div>
+<div class="item"><b>4. Organize references</b><span class="muted">Save metadata and DOI/URL. Use Zotero or MyBib to help format citations, then check the required style.</span></div>
+<div class="item"><b>5. Synthesize in your own words</b><span class="muted">Compare studies by theme, method, findings, similarities, differences, and research gap. Do not copy AI output as your own work.</span></div>
+<div class="item"><b>6. Back up your work</b><span class="muted">Export or copy important notes and references to a separate document or cloud drive.</span></div>
+</div><p class="notice">Privacy reminder: avoid uploading classmates' personal information, private school records, passwords, or other sensitive data to AI services.</p></section>
+<footer>ResearchHub AI · Personal prototype · External tools open separately · Data is stored locally in this browser</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));b.classList.add('active');$(b.dataset.tab).classList.add('active')}));
+const get=(k)=>JSON.parse(localStorage.getItem('rh_'+k)||'[]'), put=(k,v)=>localStorage.setItem('rh_'+k,JSON.stringify(v));
+function render(k,target,fields){let a=get(k);$(target).innerHTML=a.length?a.map((o,i)=>`<div class="item"><b>${esc(o[fields[0]]||'Untitled')}</b><span class="muted">${fields.slice(1).map(f=>esc(o[f]||'')).filter(Boolean).join(' · ')}</span>${o.url?`<br><a href="${esc(o.url)}" target="_blank" rel="noopener">Open source</a>`:''}<br><button onclick="del('${k}',${i})">Delete</button></div>`).join(''):'<span class="muted">Nothing saved yet.</span>'}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+window.del=(k,i)=>{let a=get(k);a.splice(i,1);put(k,a);refresh()};
+function refresh(){render('papers','paperList',['title','authors','year']);render('refs','refList',['title','authors','year','journal','url']);render('notes','noteList',['title','body'])}
+$('paperForm').onsubmit=e=>{e.preventDefault();let a=get('papers');a.unshift({title:$('pt').value,authors:$('pa').value,year:$('py').value,url:$('pd').value,summary:$('ps').value});put('papers',a);e.target.reset();refresh()};
+$('refForm').onsubmit=e=>{e.preventDefault();let a=get('refs');a.unshift({title:$('rt').value,authors:$('ra').value,year:$('ry').value,journal:$('rj').value,url:$('ru').value});put('refs',a);e.target.reset();refresh()};
+$('saveNote').onclick=()=>{if(!$('nt').value.trim()&&!$('nb').value.trim())return;let a=get('notes');a.unshift({title:$('nt').value||'Research note',body:$('nb').value});put('notes',a);$('nt').value='';$('nb').value='';refresh()};
+$('clearNote').onclick=()=>{$('nt').value='';$('nb').value=''};
+refresh();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script></body></html>
